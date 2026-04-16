@@ -1,0 +1,35 @@
+{
+  "name": "airport-management-back-end",
+  "version": "1.0.0",
+  "description": "[Trello](https://trello.com/b/2zMIHZ1E/%D9%90airport-management)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h-alhakeem12/Airport-management-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/h-alhakeem12/Airport-management-back-end/issues"
+  },
+  "homepage": "https://github.com/h-alhakeem12/Airport-management-back-end#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-mongo": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.4.1",
+    "morgan": "^1.10.1"
+  }
+}
