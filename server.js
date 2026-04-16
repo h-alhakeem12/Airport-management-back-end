@@ -8,6 +8,7 @@ const cors = require("cors")
 //const authRouter = require("./routes/authRouter")
 const flightRouter = require("./routes/flightRouter")
 //const taskRouter = require("./routes/taskRouter")
+const terminalRouter = require("./routes/terminalRouter")
 
 const PORT = process.env.PORT || 3001
 
@@ -30,6 +31,7 @@ mongoose
 //app.use("/auth", authRouter)
 app.use("/flights", flightRouter)
 //app.use("/tasks", taskRouter)
+app.use("/terminal", terminalRouter)
 
 app.get("/", (req, res) => {
   res.json({ message: "Airport Management API is running..." })

@@ -55,7 +55,7 @@ const deleteTerminal = async (req, res) => {
   }
 }
 
-module.export = {
+module.exports = {
   getTerminal,
   getTerminalById,
   addTerminal,
