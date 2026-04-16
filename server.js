@@ -5,14 +5,9 @@ const path = require("path")
 const morgan = require("morgan")
 const cors = require("cors")
 
-const authRouter = require("./routes/authRouter")
+//const authRouter = require("./routes/authRouter")
 const flightRouter = require("./routes/flightRouter")
 //const taskRouter = require("./routes/taskRouter")
-
-const dns = require("dns")
-dns.setServers(["8.8.8.8", "1.1.1.1"])
-
-const db = require("./db")
 
 const PORT = process.env.PORT || 3001
 
@@ -32,7 +27,7 @@ mongoose
   .catch((err) => console.log("Mongo connection error:", err))
 
 // Routes
-app.use("/auth", authRouter)
+//app.use("/auth", authRouter)
 app.use("/flights", flightRouter)
 //app.use("/tasks", taskRouter)
 
