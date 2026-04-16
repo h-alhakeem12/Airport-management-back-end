@@ -11,7 +11,9 @@ const getFlights = async (req, res) => {
 
 const getFlightById = async (req, res) => {
   try {
-    const flight = await Flight.findById(req.params.id).populate("pilot terminal")
+    const flight = await Flight.findById(req.params.id).populate(
+      "pilot terminal"
+    )
     if (!flight) return res.status(404).json({ message: "Flight not found" })
     res.json(flight)
   } catch (error) {
@@ -30,7 +32,11 @@ const addFlight = async (req, res) => {
 
 const updateFlight = async (req, res) => {
   try {
-    const updatedFlight = await Flight.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const updatedFlight = await Flight.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    )
     res.json(updatedFlight)
   } catch (error) {
     res.status(500).json({ message: error.message })
@@ -52,5 +58,5 @@ module.exports = {
   getFlightById,
   addFlight,
   updateFlight,
-  deleteFlight
+  deleteFlight,
 }
