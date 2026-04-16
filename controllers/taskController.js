@@ -1,8 +1,10 @@
 const Task = require("../models/Task")
+const User = require("../models/User")
+const Flight = require("../models/Flight")
 
 const getTasks = async (req, res) => {
   try {
-    const tasks = await Task.find({}).populate("assigned To flight")
+    const tasks = await Task.find({}).populate("assignedTo flight")
     res.send(tasks)
   } catch (error) {
     res.status(500).send({ message: error.message })
@@ -12,7 +14,7 @@ const getTasks = async (req, res) => {
 const getTaskById = async (req, res) => {
   try {
     const tasks = await Task.findById(req.params.id).populate(
-      "assigned To flight"
+      "assignedTo flight"
     )
     if (!tasks) {
       return res.status(404).send({ message: "Task not found" })
