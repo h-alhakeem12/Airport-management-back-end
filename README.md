@@ -1,4 +1,4 @@
-# AIRPORT MANAGEMENT SYSTEM
+# AeroMgt
 
 ## Date: 4/16/2026
 
@@ -18,20 +18,19 @@
 
 ## ***Description***
 
-#### The Airport Management System is a full-stack application designed to streamline airport operations. The platform provides a dual-interface experience: an Admin Dashboard for managing personnel, flights, and task assignments, and a Staff Portal for employees to track their assigned flights and duties in real-time.
-
-#### By centralizing flight schedules and task management, the system ensures efficient communication between airport administration and ground staff, improving overall operational workflow.
+#### The AeroMgt Frontend is a responsive React application designed for airport operational staff and administrators. It features a role-based dashboard system that dynamically renders components based on whether the logged-in user is an Admin, a Pilot, or Cabin Crew.
+#### By using modern React hooks and protected routing, the interface ensures that sensitive administrative tools remain private while providing staff with a clear, real-time view of their flight schedules and task lists.
 
 ***
 
 ## ***Technologies Used***
 
-* Frontend: React.js, React Router
+
 * Backend: Node.js, Express.js
 * Database: MongoDB, Mongoose
 * Authentication: JWT & BCRYPT
-* Deployment: [Surge] (Frontend) & [Render] (Backend)
-* Styling: CSS
+* Deployment:[Render] (Backend)
+
 
 ***
 
@@ -40,7 +39,7 @@
 #### 1.  Admin Login: Create and manage staff accounts, flights, and tasks.
 #### 2.  Staff Login: View personalized flights and tasks.
 #### The project was deployed and can be viewed here:
-[Live Demo](PUT_DEPLOYED_LINK_HERE)
+[Live Demo]()
 
 ***
 
