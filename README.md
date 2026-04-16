@@ -5,11 +5,15 @@
 ### By: FATEMA ALNAJJAS & Hussain Alhakeem & Ali Hasan
 
 #### Links:
+[Trello](https://trello.com/b/2zMIHZ1E/%D9%90airport-management)
+
 [GitHub - Fatema](https://github.com/Fatii78) | [LinkedIn - Fatema](https://www.linkedin.com/in/fatema-alnajjas-a57198228)
 
-GitHub - [NAME] | LinkedIn - [NAME]
+[GitHub - Hussain](https://github.com/h-alhakeem12) | [LinkedIn - Hussain](https://www.linkedin.com/in/hussain-alhakeem-77454939a?utm_source=share_via&utm_content=profile&utm_medium=member_ios)
 
-GitHub - [NAME] | LinkedIn - [NAME]
+[GitHub - Ali](https:) | [LinkedIn - Ali](https:)
+
+
 ***
 
 ## ***Description***
@@ -33,22 +37,17 @@ GitHub - [NAME] | LinkedIn - [NAME]
 
 ## ***Getting Started***
 
-##### 1.  Admin Login: Create and manage staff accounts, flights, and tasks.
-##### 2.  Staff Login: View personalized flights and tasks.
-##### The project was deployed and can be viewed here:
+#### 1.  Admin Login: Create and manage staff accounts, flights, and tasks.
+#### 2.  Staff Login: View personalized flights and tasks.
+#### The project was deployed and can be viewed here:
 [Live Demo](PUT_DEPLOYED_LINK_HERE)
 
 ***
 
 ## ***Screenshots***
 
-![HOME](./public/images/home.png)
-![SIGN-IN](./public/images/sign-in.png)
-![SIGN-out](./public/images/sign-out.png)
-#### WireFrames
-![WIREFRAMES](./public/images/wireFrames.jpeg)
 #### ERD
-![ERD](./public/images/ER.png)
+![ERD](./images/ERD%20air%20port.jpeg)
 ***
 
 ## ***Future Updates***
@@ -66,13 +65,15 @@ GitHub - [NAME] | LinkedIn - [NAME]
 - HOME PAGE
 
 
-###  TEAMMATE 2
+###  Hussain Alhakeem
+-
 
-
-###  TEAMMATE 3
+###  Ali Hassan
+-
 ***
 
 ## ***Credits***
 
 Markdown Guide: https://ia.net/writer/support/general/markdown-guide
+
 Markdown Cheatsheet: https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
