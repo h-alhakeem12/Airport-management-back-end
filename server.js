@@ -3,8 +3,9 @@ const express = require("express")
 const logger = require("morgan")
 const cors = require("cors")
 
-//const authRouter = require("./routes/authRouter")
+
 const authRouter = require("./routes/authRouter")
+const staffRouter = require("./routes/staffRouter")
 const flightRouter = require("./routes/flightRouter")
 const terminalRouter = require("./routes/terminalRouter")
 const taskRouter = require("./routes/taskRouter")
@@ -24,8 +25,9 @@ app.use(logger("dev"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-//app.use("/auth", authRouter)
+
 app.use("/auth", authRouter)
+app.use("/staff", staffRouter)
 app.use("/flights", flightRouter)
 app.use("/tasks", taskRouter)
 app.use("/terminal", terminalRouter)
