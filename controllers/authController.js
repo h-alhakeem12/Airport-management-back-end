@@ -53,9 +53,18 @@ const checkSession = async (req, res) => {
   const { payload } = res.locals
   res.send(payload)
 }
+const getAll = async (req, res) => {
+  try {
+    const user = await User.find({})
+    res.send(user)
+  } catch (error) {
+    res.status(500).send({ message: error.message })
+  }
+}
 
 module.exports = {
   Register,
   Login,
   checkSession,
+  getAll,
 }
