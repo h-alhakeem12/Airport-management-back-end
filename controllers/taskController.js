@@ -36,7 +36,7 @@ const addTask = async (req, res) => {
 
 const updateTask = async (req, res) => {
   try {
-    const updateTask = await Task.findByIdAndDelete(req.params.id, req.body, {
+    const updateTask = await Task.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     })
     if (!updateTask) {

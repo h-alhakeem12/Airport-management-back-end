@@ -11,8 +11,11 @@ const getTerminal = async (req, res) => {
 const getTerminalById = async (req, res) => {
   try {
     const terminal = await Terminal.findById(req.params.id)
-    if (!terminal)
-      return res.status(404).send({ message: "Terminal not found" })
+    if (terminal) {
+      res.send(terminal)
+    } else {
+      res.send("Terminal not found")
+    }
   } catch (error) {
     res.status(500).send({ message: error.message })
   }
