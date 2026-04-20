@@ -8,7 +8,7 @@ router.post(
   middleware.stripToken,
   middleware.verifyToken,
   middleware.isAdmin,
-  controller.Register
+  staffController.Register
 )
 router.get("/:id", staffController.getStaffById)
 router.put("/:id", staffController.updateStaff)
