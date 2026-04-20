@@ -11,8 +11,8 @@ const getStaff = async (req, res) => {
 }
 const Register = async (req, res) => {
   try {
-    const { name, email, passwordDigest, role, jobTitle } = req.body
-    let passwordDigest = await middleware.hashPassword(passwordDigest)
+    const { name, email, password, role, jobTitle } = req.body
+    let passwordDigest = await middleware.hashPassword(password)
     let existingUser = await User.exists({ email })
     if (existingUser) {
       return res
