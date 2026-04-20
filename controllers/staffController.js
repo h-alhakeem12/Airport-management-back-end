@@ -2,7 +2,7 @@ const User = require("../models/User")
 
 const getStaff = async (req, res) => {
   try {
-    const staffMembers = await User.find({})
+    const staffMembers = await User.find({ role: "staff" })
     res.json(staffMembers)
   } catch (error) {
     res.status(500).json({ message: error.message })
