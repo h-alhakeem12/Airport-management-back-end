@@ -47,23 +47,6 @@ const verifyToken = (req, res, next) => {
     res.status(401).send({ status: "Error", msg: "Verify Token Error!" })
   }
 }
-const isAdmin = (req, res, next) => {
-  const { payload } = res.locals
-
-  if (payload && payload.role === "admin") {
-    return next()
-  }
-
-  res.status(403).send({ status: "Error", msg: "Admin Access Only" })
-}
-
-const isStaff = (req, res, next) => {
-  const { payload } = res.locals
-  if (payload && (payload.role === "staff" || payload.role === "admin")) {
-    return next()
-  }
-  res.status(403).send({ status: "Error", msg: "Staff Access Only" })
-}
 
 module.exports = {
   hashPassword,
@@ -71,6 +54,4 @@ module.exports = {
   createToken,
   stripToken,
   verifyToken,
-  isAdmin,
-  isStaff,
 }
