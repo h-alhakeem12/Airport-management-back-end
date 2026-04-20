@@ -63,7 +63,6 @@ const getAll = async (req, res) => {
 }
 
 module.exports = {
-  Register,
   Login,
   checkSession,
   getAll,
