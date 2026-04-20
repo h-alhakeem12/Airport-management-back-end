@@ -10,7 +10,7 @@ const getStaff = async (req, res) => {
 }
 const Register = async (req, res) => {
   try {
-    const { name, email, password, role, jobTitle } = req.body
+    const { name, email, password, jobTitle } = req.body
     const role = req.body.role.toLowerCase()
 
     let passwordDigest = await middleware.hashPassword(password)
