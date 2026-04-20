@@ -11,24 +11,27 @@ const getStaff = async (req, res) => {
 const Register = async (req, res) => {
   try {
     const { name, email, password, role, jobTitle } = req.body
+    const role = req.body.role.toLowerCase()
+
     let passwordDigest = await middleware.hashPassword(password)
-    let existingUser = await User.exists({ email })
+
+    let existingUser = await User.findOne({ email })
     if (existingUser) {
-      return res
-        .status(400)
-        .send("A user with that email has already been registered!")
-    } else {
-      const user = await User.create({
-        name,
-        email,
-        passwordDigest,
-        role,
-        jobTitle,
-      })
-      res.send(user)
+      return res.status(400).send("User already exists")
     }
+
+    const user = await User.create({
+      name,
+      email,
+      passwordDigest,
+      role,
+      jobTitle: jobTitle.toLowerCase(),
+    })
+
+    res.status(201).send(user)
   } catch (error) {
-    throw error
+    console.error("Register Error:", error)
+    res.status(500).send({ msg: "Internal Server Error", error: error.message })
   }
 }
 
