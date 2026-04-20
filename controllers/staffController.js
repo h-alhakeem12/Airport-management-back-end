@@ -1,4 +1,5 @@
 const User = require("../models/User")
+const middleware = require("../middleware")
 
 const getStaff = async (req, res) => {
   try {
@@ -10,8 +11,8 @@ const getStaff = async (req, res) => {
 }
 const Register = async (req, res) => {
   try {
-    const { name, email, password, role, jobTitle } = req.body
-    let passwordDigest = await middleware.hashPassword(password)
+    const { name, email, passwordDigest, role, jobTitle } = req.body
+    let passwordDigest = await middleware.hashPassword(passwordDigest)
     let existingUser = await User.exists({ email })
     if (existingUser) {
       return res
