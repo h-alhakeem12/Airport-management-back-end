@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const staffController = require("../controllers/staffController")
+const middleware = require("../middleware")
 
 router.get("/", staffController.getStaff)
 router.get("/admin", staffController.getAdmin)
