@@ -5,7 +5,7 @@
 ### By: FATEMA ALNAJJAS & Hussain Alhakeem & Ali Hasan
 
 #### Links:
-[Trello](https://trello.com/b/2zMIHZ1E/%D9%90airport-management)
+[Trello](https://trello.com/b/2zMIHZ1E/%D9%90airport-management) | [Frontend repo](https://github.com/h-alhakeem12/Airport-management-front-end)
 
 [GitHub - Fatema](https://github.com/Fatii78) | [LinkedIn - Fatema](https://www.linkedin.com/in/fatema-alnajjas-a57198228)
 
