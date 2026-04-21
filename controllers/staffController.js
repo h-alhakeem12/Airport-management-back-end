@@ -3,7 +3,7 @@ const middleware = require("../middleware")
 
 const getStaff = async (req, res) => {
   try {
-    const staffMembers = await User.find({ role: "staff" })
+    const staffMembers = await User.find({})
     res.json(staffMembers)
   } catch (error) {
     res.status(500).json({ message: error.message })
