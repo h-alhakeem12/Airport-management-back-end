@@ -11,7 +11,7 @@ const getStaff = async (req, res) => {
 }
 const Register = async (req, res) => {
   try {
-    const { name, email, password, role, jobTitle } = req.body
+    const { name, email, password, urlPicture, role, jobTitle } = req.body
     let passwordDigest = await middleware.hashPassword(password)
     let existingUser = await User.exists({ email })
     if (existingUser) {
@@ -23,6 +23,7 @@ const Register = async (req, res) => {
         name,
         email,
         passwordDigest,
+        urlPicture,
         role,
         jobTitle,
       })
