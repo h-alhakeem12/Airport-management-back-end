@@ -5,7 +5,7 @@ const terminalSchema = new mongoose.Schema(
     terminalName: { type: String, required: true },
     gateNumber: { type: String, required: true },
     location: { type: String, required: true },
-    isOperational: { type: Boolean, default: true },
+    isOperational: { type: String, default: true },
   },
   { timestamps: true }
 )
