@@ -2,7 +2,11 @@ const Flight = require("../models/Flight")
 
 const getFlights = async (req, res) => {
   try {
-    const flights = await Flight.find({}).populate("pilot terminal")
+    const flights = await Flight.find({})
+      .populate("pilot")
+      .populate("createdBy")
+      .populate("terminal")
+
     res.json(flights)
   } catch (error) {
     res.status(500).json({ message: error.message })
@@ -26,6 +30,7 @@ const addFlight = async (req, res) => {
     const newFlight = await Flight.create(req.body)
     res.status(201).json(newFlight)
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: error.message })
   }
 }

@@ -3,13 +3,11 @@ const express = require("express")
 const logger = require("morgan")
 const cors = require("cors")
 
-
 const authRouter = require("./routes/authRouter")
 const staffRouter = require("./routes/staffRouter")
 const flightRouter = require("./routes/flightRouter")
 const terminalRouter = require("./routes/terminalRouter")
 const taskRouter = require("./routes/taskRouter")
-//const taskRouter = require("./routes/taskRouter")
 
 const PORT = process.env.PORT || 3001
 
@@ -24,7 +22,6 @@ app.use(cors())
 app.use(logger("dev"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-
 
 app.use("/auth", authRouter)
 app.use("/staff", staffRouter)
