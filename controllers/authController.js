@@ -22,7 +22,7 @@ const Login = async (req, res) => {
     res.status(401).send({ status: "Error", msg: "Unauthorized" })
   } catch (error) {
     console.log(error)
-    res.status(401).send({ status: "Error", msg: "An error has occurred!" })
+    res.status(401).send({ status: "Error", msg: "An error has occurred!!" })
   }
 }
 const checkSession = async (req, res) => {
